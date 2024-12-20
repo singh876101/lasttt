@@ -3,8 +3,9 @@ import requests
 
 app = Flask(__name__)
 
-TOKEN = "YOUR_BOT_TOKEN"  # Replace with your bot token
-WEBHOOK_URL = "YOUR_WEBHOOK_URL"  # Replace with your Koyeb URL
+# Replace with your actual bot token and Koyeb URL
+TOKEN = "7714162630:AAFIy7UvMS9OdDOTj68b8GRxSk0MHitCeJE"
+WEBHOOK_URL = "https://boiling-aurora-sonusharma-9c2bf4bb.koyeb.app/"
 
 @app.route('/')
 def hello_world():
