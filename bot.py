@@ -22,7 +22,7 @@ class Bot(Client):
     async def start(self):
             
         await super().start()
-        print('Bot Started Powered By sonu')
+        print('Bot Started Powered By @singh7773_bot')
 
     async def stop(self, *args):
 
