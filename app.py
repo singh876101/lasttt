@@ -1,7 +1,14 @@
+from flask import Flask
 import requests
 
-TOKEN = "7714162630:AAFIy7UvMS9OdDOTj68b8GRxSk0MHitCeJE"
-WEBHOOK_URL = "https://boiling-aurora-sonusharma-9c2bf4bb.koyeb.app/"
+app = Flask(__name__)
+
+TOKEN = "YOUR_BOT_TOKEN"  # Replace with your bot token
+WEBHOOK_URL = "YOUR_WEBHOOK_URL"  # Replace with your Koyeb URL
+
+@app.route('/')
+def hello_world():
+    return 'Hello from Koyeb'
 
 def set_webhook():
     url = f"https://api.telegram.org/bot{TOKEN}/setWebhook"
@@ -13,5 +20,7 @@ def set_webhook():
         print(f"Failed to set webhook: {response.text}")
 
 if __name__ == "__main__":
-    set_webhook()
+    set_webhook()  # Set the webhook when the app starts
+    app.run(host="0.0.0.0", port=8080)
+
 
